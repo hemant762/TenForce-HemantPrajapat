@@ -9,6 +9,8 @@ namespace Test_Taste_Console_Application.Utilities
     {
         public static void CreateLine(int[] columnSizes)
         {
+            // Show Writing... Loader
+            showLoader("Writing data...");
             /*
              This is an example of what the function can create:
              --------------------+--------------------+--------------------
@@ -30,6 +32,8 @@ namespace Test_Taste_Console_Application.Utilities
 
         public static void CreateText(string[] columnLabels, int[] columnSizes)
         {
+            // Show Writing... Loader
+            showLoader("Writing data...");
             /*
              This is an example of what the function can create:
              Moon's Number       |Moon's Id           |Moon's Average Temperature
@@ -75,6 +79,11 @@ namespace Test_Taste_Console_Application.Utilities
             {
                 Console.WriteLine();
             }
+        }
+        public static void showLoader(string loaderMessage)
+        {
+            Console.WriteLine(loaderMessage);
+            Console.SetCursorPosition(0, Console.CursorTop - 1);
         }
     }
 }
